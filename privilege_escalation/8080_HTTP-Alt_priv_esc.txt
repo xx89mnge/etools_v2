@@ -1,0 +1,5 @@
+# HTTP-Alt PrivEsc (8080)
+# يشبه HTTP؛ غالبًا تطبيقات/لوحات إدارة
+grep -R "password|secret|token" /opt /var/www 2>/dev/null    # أسرار
+find /opt /var/www -writable -type f 2>/dev/null               # رفع/حقن
+sudo -l; find / -perm -4000 -type f 2>/dev/null; getcap -r / 2>/dev/null

@@ -1,0 +1,3 @@
+# VNC Tools
+ncrack -vv -p 5900 --user '' -P rockyou.txt <target>                 # Brute-force VNC
+vncsnapshot <target>:0 shot.jpg                                      # لقطة شاشة (لو متوفر)

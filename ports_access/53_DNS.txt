@@ -1,0 +1,9 @@
+# DNS Tools
+dig axfr @<target> <domain>                                          # Zone transfer
+dnsenum <domain>                                                     # تعداد سجلات DNS
+dnsrecon -d <domain> -t axfr                                         # Zone transfer بديل
+subfinder -d <domain> -all -silent > subs.txt                        # Subdomains enumeration
+amass enum -passive -d <domain> -o amass.txt                         # Amass passive
+puredns resolve subs.txt -w alive.txt                                # التحقق من الدقة
+dnsx -a -resp -r resolvers.txt -l alive.txt -o dnsx_alive.txt        # استعلامات سريعة
+shuffledns -d <domain> -list alive.txt -r resolvers.txt -o out.txt   # إعادة تحقق/Brute-force

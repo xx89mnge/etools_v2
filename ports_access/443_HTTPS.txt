@@ -1,0 +1,7 @@
+# HTTPS Tools
+httpx -u https://<target> -status-code -title -tech-detect -server -ip -cdn   # جس نبض HTTPS
+testssl.sh https://<target>                                                   # فحص TLS شامل
+sslyze --regular <target>:443                                                 # تدقيق SSL/TLS
+gobuster dir -u https://<target> -w wordlist.txt -k                           # مسارات HTTPS
+curl -vk https://<target>                                                     # Headers + TLS info
+nuclei -tags cves,ssl -u https://<target> -o ssl_findings.txt                 # قوالب TLS

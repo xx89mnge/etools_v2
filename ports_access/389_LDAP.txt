@@ -1,0 +1,4 @@
+# LDAP Tools
+ldapsearch -x -H ldap://<target> -b "dc=<domain>,dc=com" "(objectclass=*)" | head   # LDAP basic
+ldapdomaindump -u '<domain>\<user>' -p '<pass>' -d <domain> <dc_ip>               # Dump structure
+windapsearch.py --dc-ip <dc_ip> -d <domain> -u <user> -p <pass> --full             # بحث متقدم

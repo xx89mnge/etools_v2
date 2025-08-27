@@ -1,0 +1,3 @@
+# MongoDB Tools
+mongo --host <target> --eval "db.adminCommand('listDatabases')"       # استعراض قواعد
+mongodump --host <target> -d <db> -o dump/                            # نسخ قواعد (لو صلاحية)

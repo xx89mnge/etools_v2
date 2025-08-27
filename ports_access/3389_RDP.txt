@@ -1,0 +1,4 @@
+# RDP Tools
+rdpscan <target>                                                         # فحص RDP سريع
+ncrack -vv --user administrator -P rockyou.txt rdp://<target>            # Brute-force
+xfreerdp /u:administrator /p:<pass> /v:<target> /cert:ignore             # دخول يدوي

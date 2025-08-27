@@ -1,0 +1,4 @@
+# NetBIOS Tools
+nbtscan <subnet/24>                                                       # مسح NetBIOS
+enum4linux-ng -A <target>                                                 # تعداد شامل
+smbclient -L //<target> -N                                                # Shares بدون باسورد

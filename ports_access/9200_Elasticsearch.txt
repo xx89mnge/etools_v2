@@ -1,0 +1,4 @@
+# Elasticsearch Tools
+curl http://<target>:9200/_cluster/health?pretty                     # صحة الكتلة
+curl http://<target>:9200/_cat/indices?v                             # فهارس
+curl http://<target>:9200                                            # بنية عامة

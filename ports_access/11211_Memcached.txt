@@ -1,0 +1,4 @@
+# Memcached Tools
+echo -e 'stats
+quit' | nc <target> 11211                            # إحصاءات بسيطة
+memcstat --servers=<target>                                          # إحصاءات (لو متوفر)
