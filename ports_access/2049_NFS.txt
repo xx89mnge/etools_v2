@@ -1,0 +1,3 @@
+# NFS Tools
+showmount -e <target>                                                # Exported shares
+mount -t nfs <target>:/<export> /mnt/nfs -o vers=3                   # تركيب مشاركة (لو صلاحية)

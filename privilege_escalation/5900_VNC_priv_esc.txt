@@ -1,0 +1,5 @@
+# VNC PrivEsc (5900)
+# بعد دخول سطح المكتب: جرّب UAC bypass/خدمات قابلة للتعديل
+whoami /priv; schtasks /query /fo LIST /v; sc qc <service>
+# ابحث عن كلمات مرور محفوظة/Vault/ملفات creds
+# أدوات: winPEAS/Seatbelt/PowerUp/Mimikatz (حسب السكوب)

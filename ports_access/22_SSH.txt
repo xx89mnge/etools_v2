@@ -1,0 +1,13 @@
+# SSH (22)
+أوامر: 
+- ssh <user>@<TARGET>
+- hydra -l <user> -P rockyou.txt ssh://<TARGET>
+- ncrack -vv --user <user> -P rockyou.txt ssh://<TARGET>
+
+وصول: 
+- Brute-force
+- إعادة استخدام كلمات المرور
+- مفاتيح SSH (~/.ssh/authorized_keys)
+
+ملاحظات: 
+- تحقق من SSH banners/الإصدارات: nmap -sV -p22 <TARGET>

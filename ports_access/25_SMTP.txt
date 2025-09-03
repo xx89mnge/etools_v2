@@ -1,0 +1,4 @@
+# SMTP Tools
+swaks --to test@<domain> --server <target> --quit-after RCPT             # اختبار SMTP
+smtp-user-enum -M VRFY -U users.txt -t <target>                          # تعداد مستخدمين
+nc -nv <target> 25                                                       # جلسة يدوية (HELO/VRFY)

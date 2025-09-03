@@ -1,0 +1,12 @@
+# Telnet (23)
+أوامر: 
+- telnet <TARGET> 23
+- hydra -P rockyou.txt -l admin telnet://<TARGET>
+
+وصول: 
+- كلمات مرور افتراضية
+- Brute-force
+- Banner grabbing
+
+ملاحظات: 
+- عادةً غير مشفر → ممكن التقاط كلمات مرور عبر الشبكة

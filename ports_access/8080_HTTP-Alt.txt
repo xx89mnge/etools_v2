@@ -1,0 +1,6 @@
+# HTTP-Alt (8080) Tools
+httpx -u http://<target>:8080 -status-code -title -tech-detect -server -ip -cdn   # جس نبض 8080
+whatweb http://<target>:8080                                                     # تحديد تقنيات
+feroxbuster -u http://<target>:8080 -w wordlist.txt -x php,js,json,txt           # زحف
+ffuf -u http://<target>:8080/FUZZ -w wordlist.txt -t 100 -mc all                 # Fuzzing
+dirsearch -u http://<target>:8080 -e php,js,json,txt                             # Dirsearch بديل

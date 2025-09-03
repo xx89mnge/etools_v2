@@ -1,0 +1,5 @@
+# FTP Tools
+ftp <target>                       # محاولة دخول مباشر
+hydra -l anonymous -P /usr/share/wordlists/rockyou.txt ftp://<target>   # Brute-force FTP
+medusa -h <target> -u anonymous -P rockyou.txt -M ftp                  # Brute-force آخر
+wget -m ftp://anonymous:@<target>                                      # Mirror للمحتويات (لو فيه وصول)
